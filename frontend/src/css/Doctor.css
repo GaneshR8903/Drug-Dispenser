@@ -1,0 +1,211 @@
+/* General Page Styling */
+.doctorMain {
+    margin-top: 100px; /* Adjust to match navbar height */
+    padding: 20px;
+    max-width: 1000px;
+    height: calc(100vh - 100px); /* Fills screen below navbar */
+    overflow-y: auto; /* Scroll inside this container only */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Heading */
+.doctorMain h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 10px;
+}
+
+/* Form Layout */
+.doctorMain form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 30px;
+}
+
+/* Full width for text areas and medicine sections */
+.full-width {
+    grid-column: span 2;
+}
+
+/* Form field styling */
+.intbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.intbox label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.intbox input,
+.intbox select,
+.intbox textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.intbox input:focus,
+.intbox select:focus,
+.intbox textarea:focus {
+    border-color: #1e3a8a;
+}
+
+/* Medicine Section Styling */
+.mediInput label {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px 0;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Container for all medicine inputs */
+.mediMain {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+/* Each medicine + quantity row */
+.medicineRow {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Dropdown for medicine names */
+.medicineRow select {
+    flex: 2;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    min-width: 160px;
+}
+
+/* Quantity input */
+.medicineRow input[type="number"] {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    min-width: 80px;
+}
+
+/* Remove button (text or icon) */
+.medicineRow .removeBtn {
+    background-color: #ef4444;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+.medicineRow .removeBtn:hover {
+    background-color: #dc2626;
+}
+
+/* Add Medicine Button */
+.addMedicineBtn {
+    align-self: flex-start;
+    padding: 6px 12px;
+    background-color: #10b981;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.addMedicineBtn:hover {
+    background-color: #059669;
+}
+
+
+/* Icon Sizing for Add/Remove Medicine */
+.plusIcon,
+.minusIcon {
+  width: 24px;          /* Adjust as needed (try 20px or 16px for smaller) */
+  height: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.plusIcon:hover,
+.minusIcon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Submit Button */
+.doctorMain form button {
+    grid-column: span 2;
+    padding: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 7px;
+}
+
+.doctorMain form button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .doctorMain {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .doctorMain form {
+        grid-template-columns: 1fr;
+    }
+
+    .doctorMain form button {
+        grid-column: span 1;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}

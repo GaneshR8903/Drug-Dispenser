@@ -1,0 +1,225 @@
+/* Global Styling */
+body {
+  background: url('../images/bg1.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Main Container */
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Navbar */
+.imgBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.imgBox p {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.navbar img {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 30px;
+  list-style: none;
+}
+
+.menu li:hover {
+  color: white;
+  background-color: blue;
+  padding: 5px 10px;
+  border-radius: 0px 5px 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* Background Overlay */
+.center {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(images/bg1.jpg) no-repeat fixed;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Authentication Container */
+.auth-container {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  padding: 60px 50px;
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.input-box {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.input-box label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #00ffff;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00ffff, #0088ff);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 15px;
+}
+
+.auth-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 35px rgba(0, 136, 255, 1);
+}
+
+/* Home Box */
+.homeBox {
+  width: 70%;
+  min-height: 700px;
+  border-radius: 15px 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  display: flex;
+}
+
+/* Find Patient Section */
+.FindPatientDiv {
+  flex: 0.6;
+  background: linear-gradient(135deg, rgb(44, 44, 251), rgb(30, 144, 255));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px 0 0 0;
+}
+
+/* New Patient Section */
+.NewPatientBox {
+  flex: 1.4;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-radius: 0 0 15px 0;
+}
+
+/* Form Styling */
+.PatientDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+.NewPatientBox input,
+.NewPatientBox textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.NewPatientBox button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.NewPatientBox button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .homeBox {
+    flex-direction: column;
+    width: 90%;
+  }
+  .PatientDetails {
+    grid-template-columns: 1fr;
+  }
+}

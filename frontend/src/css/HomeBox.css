@@ -1,0 +1,146 @@
+/* Parent container for both sections */
+.homeBox {
+    width: 70%;
+    min-height: 700px;
+    border-radius: 15px 0;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+}
+
+/* Left section - Find Patient (Smaller) */
+.FindPatientDiv {
+    flex: 0.6; /* Reduced size */
+    background: linear-gradient(135deg, rgb(44, 44, 251), rgb(30, 144, 255));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px 0 0 0;
+    min-height: 700px;
+}
+
+/* Styling for Enter Patient ID Input */
+.FindPatientDiv input {
+    width: 90%;
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Right section - New Patient (Larger) */
+.NewPatientBox {
+    flex: 1.4; /* Increased size */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 70%;
+    border-radius: 0 0 15px 0;
+    min-height: 700px;
+}
+
+/* Form container */
+.NewPatientBox form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 15px;
+}
+
+/* Styling for Gender Dropdown */
+.NewPatientBox select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    appearance: none; /* Removes default arrow styling */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+    cursor: pointer;
+}
+
+/* Optional: Hover and Focus effects for better UX */
+.NewPatientBox select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+
+/* Grid Layout for Inputs */
+.PatientDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Styling for Inputs */
+.NewPatientBox input,
+.NewPatientBox textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.NewPatientBox button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 30px auto 0;
+    display: block;
+}
+
+/* Hover Effect */
+.NewPatientBox button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .homeBox {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .FindPatientDiv, .NewPatientBox {
+        width: 100%;
+        border-radius: 10px;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .FindPatientDiv {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .NewPatientBox {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .PatientDetails {
+        grid-template-columns: 1fr;
+    }
+}

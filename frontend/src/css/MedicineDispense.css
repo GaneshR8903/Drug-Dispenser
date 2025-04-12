@@ -1,0 +1,192 @@
+/* ====== General Container Styles ====== */
+.mainMedicine,
+.dispenseUpdate {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== Headings ====== */
+.mainMedicine h2,
+.dispenseUpdate h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mainMedicine h3,
+.dispenseUpdate h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #34495e;
+  text-align: left;
+}
+
+/* ====== Tables ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+th {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 14px 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 14px 12px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f6fc; /* Light bluish */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e9f1fb; /* Slightly deeper shade */
+}
+
+tbody tr:hover {
+  background-color: #d6eaff; /* Hover effect for row */
+  transition: background-color 0.2s ease;
+}
+
+td[colspan] {
+  font-style: italic;
+  font-weight: 600;
+  color: #666;
+  background-color: #fbecec;
+}
+
+/* ====== Buttons ====== */
+button {
+  padding: 6px 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e8449;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ====== Icon Buttons for Increment/Decrement ====== */
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+/* Style for buttons inside table data cells */
+table td button {
+  background-color: #007bff;  /* Bootstrap-like primary blue */
+  color: #fff;                /* White text */
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+  background-color: #0056b3;  /* Darker on hover */
+}
+
+/* Optional: Icon buttons (if using images like PlusIcon, MinusIcon) */
+table td button img.icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* Make icons white inside dark buttons */
+}
+
+
+/* ====== Input Field ====== */
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+/* ====== Submit Button Styling ====== */
+.submitBtn {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #1f618d;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .mainMedicine,
+  .dispenseUpdate {
+    width: 95%;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px 6px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+}
