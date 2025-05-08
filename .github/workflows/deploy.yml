@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Call Render Deploy Hook
-        run: curl -X POST https://drug-dispenser.onrender.com
+        run: curl -X POST https://api.render.com/deploy/srv-d0ee5t3uibrs73bif7mg?key=uBluh6CA5-A
