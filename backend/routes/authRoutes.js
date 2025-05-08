@@ -1,5 +1,5 @@
 const express = require("express");
-const { signupUser, loginUser } = require("../controllers/authController");
+const { signupUser, loginUser, forgotPassword, resetPassword   } = require("../controllers/authController");
 
 const router = express.Router();
 
@@ -10,6 +10,14 @@ router.post("/signup", signupUser);
 
 // Login Route
 router.post("/login", loginUser);
+
+// Forgot Password Route
+router.post("/forgot-password", forgotPassword); // ✅ Now correctly defined
+
+// Reset Password Route
+// ✅ Use the actual controller logic
+router.post("/reset-password", resetPassword);
+
 
 // Logout Route
 router.post("/logout", (req, res) => {
