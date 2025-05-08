@@ -1,0 +1,14 @@
+name: Trigger Render Deploy
+
+on:
+  push:
+    branches:
+      - main  # or 'master' based on your branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Render Deploy Hook
+        run: curl -X POST https://drug-dispenser.onrender.com
